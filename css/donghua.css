@@ -1,0 +1,1173 @@
+body {
+    background-color: #000;
+}
+
+.body {
+    width: 50px;
+    height: 50px;
+    /* background-color: black; */
+    position: absolute;
+    left: 50%;
+    margin-left: -405px;
+    bottom: 425px;
+    animation: bodyrun 5s linear forwards;
+    transform: scale(1) rotateZ(180deg);
+    z-index: 20;
+}
+
+.body .body-bg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    position: absolute;
+    animation: color0 5s ease-out forwards;
+}
+
+@keyframes color0 {
+    100% {
+        background-color:yellow;
+    }
+}
+
+.body .mouth {
+    width: 0;
+    height: 0;
+    /* border-style: transparent transparent transparent solid; */
+    border-right: 25px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid #000;
+    border-top: 15px solid transparent;
+    position: absolute;
+    top: 11px;
+    animation: eat 1s 7;
+    z-index: 16;
+}
+
+@keyframes eat {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes bodyrun {
+    99% {
+        margin-left: 440px;
+        transform: scale(3.5) rotateZ(180deg);
+    }
+    100% {
+        margin-left: 440px;
+        transform: scale(3.5) rotateZ(0deg);
+    }
+}
+
+.ghost {
+    position: absolute;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    /* background-color: #000; */
+    left: 50%;
+    margin-left: -700px;
+    bottom: 400px;
+    transform: rotateZ(0deg);
+    animation: ghostrun 5s linear forwards, ghostdao 0.5s 5s forwards;
+    z-index: 19;
+}
+
+@keyframes ghostrun {
+    100% {
+        margin-left: 320px;
+    }
+}
+
+@keyframes ghostdao {
+    0% {
+        margin-left: 280px;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        margin-left: 280px;
+        bottom: 370px;
+        transform: rotateZ(-90deg);
+    }
+}
+
+.ghost .ghead {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 10px;
+}
+
+.ghost .gbody {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #fff;
+    top: 25px;
+    left: 10px;
+}
+
+.ghost .ghand1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    left: -10px;
+}
+
+.ghost .ghand2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    right: -10px;
+    transform: rotateY(180deg);
+}
+
+.ghost .geye {
+    width: 40px;
+    height: 30px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.ghost .geye i:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi 0.3s 5s forwards;
+}
+
+.ghost .geye i:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi 0.3s 5s forwards;
+}
+
+@keyframes xiaoshi {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ghost .geye i .dian {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 10px;
+    left: 5px;
+}
+
+.ghost .geye i .hu {
+    top: 5px;
+    position: absolute;
+    ;
+    width: 8px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-top-left-radius: 100%;
+    transform: rotate(50deg);
+    opacity: 1;
+}
+
+.ghost .geye .biyangl {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyang 0.3s 5s forwards;
+}
+
+.ghost .geye .biyangr {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyang 0.3s 5s forwards;
+}
+
+@keyframes biyang {
+    100% {
+        opacity: 1;
+    }
+}
+
+.biyangl li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(20deg);
+}
+
+.biyangl li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangl li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangr li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(20deg);
+}
+
+.ghost .gfoot {
+    position: absolute;
+    bottom: 9px;
+}
+
+.ghost .gfoot li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/*-----------------ghost1---------------------- */
+
+.ghost1 {
+    position: absolute;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    /* background-color: #000; */
+    left: 50%;
+    margin-left: 230px;
+    bottom: 400px;
+    transform: rotateZ(0deg);
+    animation: ghostrun 5s linear forwards, ghostdao 0.5s 5s forwards, hun 2s 5.5s linear forwards;
+    z-index: 19;
+    opacity: 0;
+}
+
+@keyframes hun {
+    20% {
+        opacity: 0.1;
+        margin-left: 210px;
+        bottom: 460px;
+        transform: rotateZ(0deg);
+    }
+    50% {
+        opacity: 0.2;
+        margin-left: 230px;
+        bottom: 500px;
+        transform: rotateZ(0deg);
+    }
+    80% {
+        opacity: 0.2;
+        margin-left: 210px;
+        bottom: 530px;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        opacity: 0.2;
+        margin-left: 230px;
+        bottom: 560px;
+        transform: rotateZ(0deg);
+    }
+}
+
+.ghost1 .ghead {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 10px;
+}
+
+.ghost1 .gbody {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #fff;
+    top: 25px;
+    left: 10px;
+}
+
+.ghost1 .ghand1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    left: -10px;
+}
+
+.ghost1 .ghand2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    right: -10px;
+    transform: rotateY(180deg);
+}
+
+.ghost1 .geye {
+    width: 40px;
+    height: 30px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.ghost1 .geye i:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.ghost1 .geye i:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.ghost1 .geye i .dian {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 10px;
+    left: 5px;
+}
+
+.ghost1 .geye i .hu {
+    top: 5px;
+    position: absolute;
+    ;
+    width: 8px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-top-left-radius: 100%;
+    transform: rotate(50deg);
+    display: none;
+}
+
+.ghost1 .geye .biyangl {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+}
+
+.ghost1 .geye .biyangr {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+}
+
+.biyangl li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(20deg);
+}
+
+.biyangl li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangl li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangr li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(20deg);
+}
+
+.ghost1 .gfoot {
+    position: absolute;
+    bottom: 9px;
+}
+
+.ghost1 .gfoot li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* -----------------------ghost2-----------------------*/
+
+.ghost2 {
+    position: absolute;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    /* background-color: #000; */
+    left: 50%;
+    margin-left: -800px;
+    bottom: 200px;
+    transform: rotateZ(0deg);
+    /* animation: ghostrun 5s linear forwards ,ghostdao 0.5s 5s forwards, hun 2s 5.5s linear forwards; */
+    animation: ghostrun2 4.5s linear 0.5s forwards, ghostback2 1.5s 6s forwards, shake2 0.5s 7s infinite forwards;
+    z-index: 19;
+    /* opacity: 0; */
+}
+
+@keyframes ghostrun2 {
+    100% {
+        margin-left: 0px;
+        bottom: 300px;
+    }
+}
+
+@keyframes ghostback2 {
+    0% {
+        margin-left: 0px;
+        bottom: 300px;
+    }
+    100% {
+        margin-left: -900px;
+        bottom: 100px;
+    }
+}
+
+@keyframes shake2 {
+    0% {
+        margin-left: -900px;
+        bottom: 100px;
+    }
+    30% {
+        margin-left: -905px;
+        bottom: 105px;
+    }
+    50% {
+        margin-left: -900px;
+        bottom: 105px;
+    }
+    80% {
+        margin-left: -895px;
+        bottom: 100px;
+    }
+    100% {
+        margin-left: -900px;
+        bottom: 100px;
+    }
+}
+
+.ghost2 .ghead {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 10px;
+}
+
+.ghost2 .gbody {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #fff;
+    top: 25px;
+    left: 10px;
+}
+
+.ghost2 .ghand1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    left: -10px;
+}
+
+.ghost2 .ghand2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    right: -10px;
+    transform: rotateY(180deg);
+}
+
+.ghost2 .geye {
+    width: 40px;
+    height: 30px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.ghost2 .geye i:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi2 0.2s 6s forwards;
+}
+
+.ghost2 .geye i:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi2 0.2s 6s forwards;
+}
+
+.ghost2 .geye i .dian {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 10px;
+    left: 5px;
+}
+
+.ghost2 .geye i .hu {
+    top: 5px;
+    position: absolute;
+    ;
+    width: 8px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-top-left-radius: 100%;
+    transform: rotate(50deg);
+    opacity: 1;
+    animation: xiaoshi2 0.2s 5s forwards;
+}
+
+@keyframes xiaoshi2 {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ghost2 .geye .biyangl {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyangr2 0.2s 6s forwards;
+}
+
+.ghost2 .geye .biyangr {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyangr2 0.2s 6s forwards;
+}
+
+@keyframes biyangr2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.biyangl li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(20deg);
+}
+
+.biyangl li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangl li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangr li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(20deg);
+}
+
+.ghost2 .gfoot {
+    position: absolute;
+    bottom: 9px;
+}
+
+.ghost2 .gfoot li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.ghost2 .jingle {
+    width: 60px;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    opacity: 0;
+    animation: jingle2 0.5s linear 5.5s forwards;
+}
+
+@keyframes jingle2 {
+    20% {
+        opacity: 1;
+        top: -40px;
+    }
+    60% {
+        opacity: 1;
+        top: -60px;
+    }
+    70% {
+        opacity: 0;
+        top: -60px;
+    }
+    100% {
+        opacity: 0;
+        top: -60px;
+    }
+}
+
+.ghost2 .jingle i:nth-child(1),
+.ghost2 .jingle i:nth-child(2),
+.ghost2 .jingle i:nth-child(3) {
+    width: 10px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    background-color: red;
+}
+
+.ghost2 .jingle i:nth-child(4),
+.ghost2 .jingle i:nth-child(5),
+.ghost2 .jingle i:nth-child(6) {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    background-color: red;
+}
+
+/* ------------------ghost3---------------------- */
+.ghost3 {
+    position: absolute;
+    width: 70px;
+    height: 90px;
+    position: absolute;
+    /* background-color: #000; */
+    left: 50%;
+    margin-left: -800px;
+    bottom: 700px;
+    transform: rotateZ(0deg);
+    /* animation: ghostrun 5s linear forwards ,ghostdao 0.5s 5s forwards, hun 2s 5.5s linear forwards; */
+    animation: ghostrun3 4.5s linear 0.5s forwards, ghostback3 1.5s 6s forwards, shake3 0.5s 7s infinite forwards;
+    z-index: 19;
+    /* opacity: 0; */
+}
+
+@keyframes ghostrun3 {
+    100% {
+        margin-left: -50px;
+        bottom: 450px;
+    }
+}
+
+@keyframes ghostback3 {
+    0% {
+        margin-left: -50px;
+        bottom: 450px;
+    }
+    100% {
+        margin-left: -870px;
+        bottom: 180px;
+    }
+}
+
+@keyframes shake3 {
+    0% {
+        margin-left: -870px;
+        bottom: 180px;
+    }
+    30% {
+        margin-left: -870px;
+        bottom: 175px;
+    }
+    50% {
+        margin-left: -875px;
+        bottom: 180px;
+    }
+    80% {
+        margin-left: -865px;
+        bottom: 185px;
+    }
+    100% {
+        margin-left: -870px;
+        bottom: 180px;
+    }
+}
+
+.ghost3 .ghead {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 10px;
+}
+
+.ghost3 .gbody {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #fff;
+    top: 25px;
+    left: 10px;
+}
+
+.ghost3 .ghand1 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    left: -10px;
+}
+
+.ghost3 .ghand2 {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-right: 5px solid #fff;
+    border-bottom: 25px solid #fff;
+    border-left: 5px solid transparent;
+    border-top: 25px solid transparent;
+    top: 0px;
+    right: -10px;
+    transform: rotateY(180deg);
+}
+
+.ghost3 .geye {
+    width: 40px;
+    height: 30px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.ghost3 .geye i:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi2 0.2s 6s forwards;
+}
+
+.ghost3 .geye i:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: 1;
+    animation: xiaoshi2 0.2s 6s forwards;
+}
+
+.ghost3 .geye i .dian {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 10px;
+    left: 5px;
+}
+
+.ghost3 .geye i .hu {
+    top: 5px;
+    position: absolute;
+    ;
+    width: 8px;
+    height: 10px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-top-left-radius: 100%;
+    transform: rotate(50deg);
+    opacity: 1;
+    animation: xiaoshi2 0.2s 5s forwards;
+}
+
+@keyframes xiaoshi2 {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ghost3 .geye .biyangl {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyangr2 0.2s 6s forwards;
+}
+
+.ghost3 .geye .biyangr {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    width: 10px;
+    height: 20px;
+    /* border: 1px solid #000; */
+    opacity: 0;
+    animation: biyangr2 0.2s 6s forwards;
+}
+
+@keyframes biyangr2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.biyangl li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(20deg);
+}
+
+.biyangl li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangl li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(1) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 7px;
+    transform: rotateZ(-20deg);
+}
+
+.biyangr li:nth-child(2) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 10px;
+}
+
+.biyangr li:nth-child(3) {
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #000;
+    top: 13px;
+    transform: rotateZ(20deg);
+}
+
+.ghost3 .gfoot {
+    position: absolute;
+    bottom: 9px;
+}
+
+.ghost3 .gfoot li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.ghost3 .jingle {
+    width: 60px;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    opacity: 0;
+    animation: jingle2 0.5s linear 5.5s forwards;
+}
+
+@keyframes jingle2 {
+    20% {
+        opacity: 1;
+        top: -40px;
+    }
+    60% {
+        opacity: 1;
+        top: -60px;
+    }
+    70% {
+        opacity: 0;
+        top: -60px;
+    }
+    100% {
+        opacity: 0;
+        top: -60px;
+    }
+}
+
+.ghost3 .jingle i:nth-child(1),
+.ghost3 .jingle i:nth-child(2),
+.ghost3 .jingle i:nth-child(3) {
+    width: 10px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+    background-color: red;
+}
+
+.ghost3 .jingle i:nth-child(4),
+.ghost3 .jingle i:nth-child(5),
+.ghost3 .jingle i:nth-child(6) {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    background-color: red;
+}
+
+
+/*------------------------ food ---------------------*/
+
+.foods {
+    height: 20px;
+    position: absolute;
+    right: 50%;
+    margin-right: -400px;
+    bottom: 442px;
+    width: 800px;
+    /* z-index: 17;     */
+}
+
+.foods .eatfoods {
+    height: 20px;
+    position: absolute;
+    left: 0px;
+    width: 0px;
+    background-color: #000;
+    animation: eatfood 5s linear forwards;
+    /* z-index: 18;        */
+}
+
+@keyframes eatfood {
+    100% {
+        width: 800px;
+    }
+}
+
+.foods li {
+    float: left;
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: yellow;
+}
